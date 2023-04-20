@@ -1,0 +1,7 @@
+<%- include('_partials/head') %>
+
+<% data.smartzones.forEach(smartzone => { %>
+ <%- include('_partials/card', {title: smartzone.name, image: smartzone.image.length != 0 ? smartzone.image[0] : false}) %>
+<% }) %>
+
+<%- include('_partials/foot') %>

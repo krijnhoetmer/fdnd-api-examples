@@ -1,0 +1,14 @@
+<% if (image) { %>
+
+ <article>
+  <h3><%= title %></h3>
+  <%# added <picture> and a WebP <source> to fetch an optimized version of the same image #%>
+  <picture>
+   <source type="image/webp" srcset="<%= image.originalAsWebP %>">
+   <img src="<%= image.original %>" alt="" width="<%= image.width %>" height="<%= image.height %>">
+  </picture>
+ </article>
+
+<% } %>
+
+<%# See card-step-3.ejs for next step #%>

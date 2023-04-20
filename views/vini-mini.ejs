@@ -1,0 +1,7 @@
+<%- include('_partials/head') %>
+
+<% data.producten.forEach(product => { %>
+ <%- include('_partials/card', {title: product.titel, image: product.plaatjes.length != 0 ? product.plaatjes[0] : false}) %>
+<% }) %>
+
+<%- include('_partials/foot') %>

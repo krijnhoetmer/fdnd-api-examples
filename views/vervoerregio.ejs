@@ -1,0 +1,7 @@
+<%- include('_partials/head') %>
+
+<% data.websites.forEach(website => { %>
+ <%- include('_partials/card', {title: website.titel, image: website.preview}) %>
+<% }) %>
+
+<%- include('_partials/foot') %>

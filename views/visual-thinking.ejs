@@ -1,0 +1,7 @@
+<%- include('_partials/head') %>
+
+<% data.methods.forEach(method => { %>
+ <%- include('_partials/card', {title: method.title, image: method.examples.length ? method.examples[0] : false}) %>
+<% }) %>
+
+<%- include('_partials/foot') %>

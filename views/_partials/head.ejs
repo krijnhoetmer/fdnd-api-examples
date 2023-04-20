@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="nl">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title><%= title %></title>
+  <style>
+   html { background: #000; color: #fff; font-family: sans-serif; }
+   body { margin: 1em; }
+   main { display: grid; grid-template-columns: repeat(auto-fit, 240px); gap: 1em; align-items: start; }
+   article { border: 1px solid; text-align: center; }
+   article.done { opacity: .4; text-decoration: line-through; }
+   h3 { margin: 0; }
+   p { margin: 1em; }
+   img { vertical-align: middle; max-width: 100%; height: auto; }
+   nav { display: flex; gap: 1em; }
+   a { text-decoration: none; color: inherit; border-bottom: 3px solid; }
+   a:hover, a:active { border-color: transparent; }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>Deep Dive Donderdag Dinges; Performance verbetering</h1>
+   <nav>
+    <a href="/">Home</a>
+    <% for (const slug in nav) { %>
+    <a href="/<%= slug %>"><%= nav[slug].title %></a>
+    <% } %>
+   </nav>
+  </header>
+  <h2><%= title %></h2>
+  <main>

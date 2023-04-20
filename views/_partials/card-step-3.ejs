@@ -1,0 +1,14 @@
+<% if (image) { %>
+
+ <article>
+  <h3><%= title %></h3>
+  <%# added srcset and sizes attributes, to fetch an even more optimized version of the same image #%>
+  <picture>
+   <source type="image/webp" srcset="<%= image.smallAsWebP %> 500w, <%= image.originalAsWebP %> <%= image.width %>w" sizes="240px">
+   <img src="<%= image.original %>" alt="" width="<%= image.width %>" height="<%= image.height %>" srcset="<%= image.small %> 500w, <%= image.original %> <%= image.width %>w" sizes="240px">
+  </picture>
+ </article>
+
+<% } %>
+
+<%# 🤯 #%>

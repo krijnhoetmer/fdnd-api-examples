@@ -1,0 +1,7 @@
+<%- include('_partials/head') %>
+
+<% data.players.forEach(player => { %>
+ <%- include('_partials/card', {title: player.name, image: player.image}) %>
+<% }) %>
+
+<%- include('_partials/foot') %>

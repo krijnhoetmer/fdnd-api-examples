@@ -1,0 +1,11 @@
+<% if (image) { %>
+
+ <article>
+  <h3><%= title %></h3>
+  <%# added width and height attributes, to fix the CLS issue #%>
+  <img src="<%= image.original %>" alt="" width="<%= image.width %>" height="<%= image.height %>">
+ </article>
+
+<% } %>
+
+<%# See card-step-2.ejs for next step #%>

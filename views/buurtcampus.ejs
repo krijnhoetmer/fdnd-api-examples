@@ -1,0 +1,7 @@
+<%- include('_partials/head') %>
+
+<% data.stekjes.forEach(stekje => { %>
+ <%- include('_partials/card', {title: stekje.naam, image: stekje.fotos.length != 0 ? stekje.fotos[0] : false}) %>
+<% }) %>
+
+<%- include('_partials/foot') %>

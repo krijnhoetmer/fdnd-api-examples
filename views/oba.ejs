@@ -1,0 +1,7 @@
+<%- include('_partials/head') %>
+
+<% data.vestigingen.forEach(vestiging => { %>
+ <%- include('_partials/card', {title: vestiging.naam, image: vestiging.foto}) %>
+<% }) %>
+
+<%- include('_partials/foot') %>
